@@ -31,6 +31,12 @@ public class IndexController {
         return mav;
     }
 
+    @RequestMapping(value = "", method = RequestMethod.GET)
+    public ModelAndView index() {
+        ModelAndView mav = new ModelAndView("index");
+        return mav;
+    }
+
     @RequestMapping(value = "/connection", method = RequestMethod.GET, produces = MediaType.TEXT_PLAIN_VALUE)
     @ResponseBody
     public String testConnection() {
